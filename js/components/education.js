@@ -6,7 +6,7 @@ export default function education() {
                 <div class="education-card card card-active">
                     <div class="education-card-top">
                         <h3 class="title-3 text-active" id="education-card-date-1" contenteditable="true">2023</h3>
-                        <img src="/img/icon-like.svg" alt="Like">
+                        <img src="../../img/icon-like.svg" alt="Like">
                     </div>
                     <div>
                         <p class="text-1 text-active" id="education-card-title-1" contenteditable="true">UX / UI</p>
