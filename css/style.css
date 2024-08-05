@@ -1,0 +1,471 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Regular.woff2') format('woff2'),
+         url('/fonts/Poppins-Regular.woff') format('woff');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Medium.woff2') format('woff2'),
+         url('/fonts/Poppins-Medium.woff') format('woff');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-SemiBold.woff2') format('woff2'),
+         url('/fonts/Poppins-SemiBold.woff') format('woff');
+    font-weight: 600;
+}
+
+:root {
+    --color-black-1: #000000;
+    --color-black-2: #3F3D3D;
+    --color-white-1: #FFFFFF;
+    --color-white-2: #EBF9F2;
+    --color-white-3: #DDDDDD;
+    --color-white-4: #98eebf;
+    --color-grey-1: #5C5C5C;
+    --color-grey-2: #979797;
+    --color-grey-3: #F0F0F0;
+    --color-green: #28D979;
+    --color-dark-green: #149063;
+    --color-yellow-1: #F6ED1E;
+    --color-yellow-2: rgba(126, 115, 18, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+[contenteditable="true"] {
+    transition: outline 0.3s ease;
+}
+
+[contenteditable="true"]:focus {
+    outline: 1px solid var(--color-grey-2);
+}
+
+.text-active[contenteditable="true"]:focus {
+    outline: 1px solid var(--color-white-4);
+}
+
+.title-1 {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.04;
+    color: var(--color-black-1);
+}
+
+.subtitle-1 {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.04;
+    color: var(--color-grey-1);
+}
+
+.title-2 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.50;
+    color: var(--color-black-1);
+}
+
+.title-3 {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1.04;
+    color: var(--color-black-1);
+}
+
+.title-4 {
+    font-size: 8px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--color-black-1);
+}
+
+.title-5 {
+    font-size: 5px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--color-white-1);
+}
+
+.text-1 {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-black-1);
+}
+
+.text-2 {
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-black-1);
+}
+
+.text-active {
+    color: var(--color-white-1);
+}
+
+.box {
+    padding: 12px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--color-grey-3);
+}
+
+.card {
+    padding: 8px;
+    border-radius: 8px;
+    background-color: var(--color-white-1);
+}
+
+.card-active {
+    background-color: var(--color-green);
+}
+
+.download-button {
+    width: 100%;
+    background-color: var(--color-black-1);
+    color: var(--color-white-1);
+    padding: 6px 0px;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: var(--color-green);
+}
+
+.header {
+    margin: 0 auto;
+    width: 595px;
+    padding: 15px 20px 0px 20px;
+}
+
+.container {
+    margin: 0 auto;
+    width: 595px;
+    padding: 15px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;        
+}
+
+.image-box {
+    width: 124px;
+    height: 124px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.intro-box {
+    width: 124px;
+    height: 124px;
+}
+
+.intro-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.languages-box {
+    width: 267px;
+    height: 124px;
+}
+
+.languages-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.languages-card {
+    display: flex;
+    justify-content: space-between;
+}
+
+.languages-card .title-3 {
+    width: 60px;
+}
+
+.language-level {
+    width: 168px;
+    height: 10px;
+    background-color: var(--color-white-3);
+    border-radius: 3px;
+    cursor: ew-resize;
+}
+
+.language-level-fill {
+    height: 100%;
+    background-color: var(--color-green);
+    border-radius: 3px;
+}
+
+.experience-box {
+    width: 411px;
+    height: 359px;
+}
+
+.experience-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.experience-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.experience-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.experience-card-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.experience-card-title {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.experience-card-subtitle {
+    display: flex;
+    gap: 6px;
+}
+
+.experience-card-subtitle .text-2 {
+    color: var(--color-black-2);
+}
+
+.experience-card-subtitle .text-active {
+    color: var(--color-white-2);
+}
+
+.experience-card-text {
+    width: 225px;
+}
+
+.experience-tag {
+    padding: 2px 6px;
+    color: var(--color-yellow-1);
+    background-color: var(--color-yellow-2);
+    border-radius: 60px;
+}
+
+.tools-box {
+    width: 124px;
+    height: 359px;
+}
+
+.tools-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.tools-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tools-card .title-5 {
+    padding: 2px 6px;
+    color: var(--color-white-1);
+    background-color: var(--color-black-1);
+    border-radius: 60px;
+    z-index: 1;
+}
+
+.tools-card-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-top: -5px;
+    z-index: 0;
+    width: 76px;
+    padding: 12px 4px;
+}
+
+.education-box{
+    width: 268px;
+    height: 289px;
+}
+
+.education-cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.education-card {
+    width: 116px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.education-card-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.education-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+
+.education-card-tags .text-2 {
+    color: var(--color-dark-green);
+}
+
+.education-card-tags .text-active {
+    color: var(--color-white-2);
+}
+
+.interests-and-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.interests-box {
+    width: 267px;
+    height: 177px;
+}
+
+.interests-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.interests-tag {
+    padding: 4px 10px;
+    color: var(--color-black-1);
+    background-color: var(--color-white-1);
+    border-radius: 60px;
+}
+
+.contact-box {
+    width: 267px;
+    height: 92px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact-box .title-2 {
+    line-height: 1.5;
+    margin-bottom: 11px;
+}
+
+.contact-box.card {
+    background-color: var(--color-black-1);
+}
+
+.contact-box .title-2 {
+    color: var(--color-white-1);
+}
+
+.contact-box .text-1 {
+    color: var(--color-white-3);
+}
+
+@media (max-width: 425px) {
+    .header {
+        width: 300px;
+        padding: 15px 0px 0px 0px;
+    }
+    
+    .container {
+        width: 300px;   
+        padding: 15px 0px;
+    }
+
+    .title-2 {
+        margin-bottom: 12px;
+    }
+
+    .image-box {
+        width: 140px;
+        height: 140px;
+    }
+
+    .intro-box {
+        width: 140px;
+        height: 140px;
+    }
+
+    .languages-box {
+        width: 300px;
+        height: auto;
+    }
+
+    .experience-box {
+        width: 300px;
+        height: auto;
+    }
+
+    .experience-card-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .experience-card-content .experience-card-text {
+        margin-left: 20px;
+    }
+
+    .tools-box {
+        width: 300px;
+        height: auto;
+    }
+
+    .tools-card-content {
+        width: 200px;
+    }
+
+    .education-box {
+        width: 300px;
+        height: auto;
+    }
+
+    .education-card {
+        width: 132px;
+    }
+
+    .interests-box {
+        width: 300px;
+        height: auto;
+    }
+
+    .contact-box {
+        width: 300px;
+        height: auto;
+    }
+}
